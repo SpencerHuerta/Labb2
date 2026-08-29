@@ -14,21 +14,7 @@ from array import array
 
 # print(firstarray)
 
-class ArrayQ:
-    def __init__(self):
-        self.__items = array('l',[])
 
-    def isEmpty(self):
-        return self.__items == array('l',[])
-
-    def enqueue(self, item):
-        self.__items.insert(0,item)
-
-    def dequeue(self):
-        return self.__items.pop()
-
-    def size(self):
-        return len(self.__items)
 
 # q = ArrayQ()
 # q.enqueue(1)
@@ -49,3 +35,4 @@ while not q.isEmpty():
     q.enqueue(q.dequeue())
     x = q.dequeue()
     print(x)
+
