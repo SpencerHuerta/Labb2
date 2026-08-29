@@ -1,4 +1,4 @@
-from array import array
+from arrayQfile import ArrayQ
 
 # firstarray = array('l',[1,2,3,6,7,8,9])
 

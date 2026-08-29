@@ -1,3 +1,6 @@
+from array import array
+
+
 class ArrayQ:
     def __init__(self):
         self.__items = array('l',[])
