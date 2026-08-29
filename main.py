@@ -30,12 +30,22 @@ class ArrayQ:
     def size(self):
         return len(self.__items)
 
+# q = ArrayQ()
+# q.enqueue(1)
+# q.enqueue(2)
+# x = q.dequeue()
+# y = q.dequeue()
+# if (x == 1 and y == 2):
+#     print("OK")
+# else:
+#     print("FAILED")
+
+kort = input().split()
 q = ArrayQ()
-q.enqueue(1)
-q.enqueue(2)
-x = q.dequeue()
-y = q.dequeue()
-if (x == 1 and y == 2):
-    print("OK")
-else:
-    print("FAILED")
+for i in kort:
+    q.enqueue(int(i))
+
+while not q.isEmpty():
+    q.enqueue(q.dequeue())
+    x = q.dequeue()
+    print(x)
