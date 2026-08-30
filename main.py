@@ -1,4 +1,4 @@
-from arrayQFile import ArrayQ
+from linkedQFile import LinkedQ
 
 # firstarray = array('l',[1,2,3,6,7,8,9])
 
@@ -27,7 +27,7 @@ from arrayQFile import ArrayQ
 #     print("FAILED")
 
 kort = input().split()
-q = ArrayQ()
+q = LinkedQ()
 for i in kort:
     q.enqueue(int(i))
 
