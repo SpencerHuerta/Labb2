@@ -7,6 +7,7 @@ class LinkedQ:
 
     def enqueue(self, item):
         temp = Node(item) # Skapar ett nod objekt med ett värde och värdet på nästa nod
+        self.__last = temp.getData()
         temp.setNext(self.__head) # Lägg till hela köns "historia" till temp
         self.__head = temp # koppla ihop nya noden med head.
 
@@ -22,6 +23,7 @@ class LinkedQ:
             self.__head = None  # om inte ( finns bara ett eller noll noder i kön) sätter vi kön till tom genom None
             pass
         else:
+            self.__first = previous.getData()
             previous.setNext(None)  # kopplar samman det näst första (nya första) med None, dvs längst fram. (första noden pekar inte på någon annan nod utan till jord)
         return current.getData()    # Skickar tillbaka värdet på noden som står längst fram i kön
 
