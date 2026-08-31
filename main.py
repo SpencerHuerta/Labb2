@@ -1,4 +1,4 @@
-from linkedQFile import LinkedQ
+from linkedQFile import LinkedQ # importera antingen linkedQFile eller arrayQFile
 
 # firstarray = array('l',[1,2,3,6,7,8,9])
 
@@ -15,7 +15,7 @@ from linkedQFile import LinkedQ
 # print(firstarray)
 
 
-
+# Test av ArrayQ
 # q = ArrayQ()
 # q.enqueue(1)
 # q.enqueue(2)
@@ -26,13 +26,13 @@ from linkedQFile import LinkedQ
 # else:
 #     print("FAILED")
 
-kort = input().split()
-q = LinkedQ()
+kort = input('Mata in en kortföljd (separera med mellanslag): ').split() # Ber om en input
+q = LinkedQ() # Skapar ett länkat kö objekt alternativt ett array objekt
 for i in kort:
-    q.enqueue(int(i))
+    q.enqueue(i) # Matar in varje element i kön 
 
-while not q.isEmpty():
-    q.enqueue(q.dequeue())
-    x = q.dequeue()
+while not q.isEmpty(): # körs till kön är tom
+    q.enqueue(q.dequeue()) # Tar ut första elementet och lägger till det längst bak i kön
+    x = q.dequeue() # tar bort första elementet i kön och skriver ut det.
     print(x)
 
